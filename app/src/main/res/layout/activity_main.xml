@@ -19,7 +19,23 @@
             android:layout_height="100dp"
             android:padding="10dp"
             android:src="@drawable/tje" />
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일반회원"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="법인회원"/>
+    </RadioGroup>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -28,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:maxLines="3"
             android:text="더좋은컴퓨터에 오신것을 환영합니다."
             />
     </LinearLayout>
@@ -35,16 +52,28 @@
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="사용자명 이메일 주소"/>
+        android:lines="1"
+        android:text="사용자명 이메일 주소"
+        android:textScaleX="0.5"
+        android:textStyle="italic"/>
     <EditText
+        android:hint="이메일"
+        android:textColorHint="#FF00FF"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:imeOptions="actionNext"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:textStyle="bold"
         android:text="암호"/>
     <EditText
+        android:hint="비밀번호를 입력해 주세요"
+        android:imeOptions="actionGo"
+        android:textColorHint="#FF0000"
+        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -55,12 +84,14 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="기억하기"/>
+            android:text="기억하기"
+            android:checked="true"/>
         <!--XL 상의 주석 (화면 반영 안됨)-->
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="로그인"/>
+            android:text="로그인"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -72,6 +103,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:background="#FF0000"
             android:text="회원가입"/>
         <TextView
             android:layout_width="wrap_content"
@@ -82,7 +115,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="암호를 분실하셨나요"/>
+            android:text="암호를 분실하셨나요"
+            android:textColor="#0073AA"
+            />
     </LinearLayout>
 
 
